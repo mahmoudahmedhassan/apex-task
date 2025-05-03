@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/CustomButton";
 import { navItems } from "@/constants";
 import { Menu, XIcon } from "lucide-react";
 import { useState } from "react";

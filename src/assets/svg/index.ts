@@ -13,6 +13,13 @@ import subscribe from './subscribe.svg';
 import area from './area.svg';
 import bathroom from './bathroom.svg';
 import bedroom from './bedroom.svg';
+import category1 from './category1.svg';
+import category2 from './category2.svg';
+import category3 from './category3.svg';
+import category4 from './category4.svg';
+import category5 from './category5.svg';
+import category6 from './category6.svg';
 
 
-export { logo,profile_circle,home_hashtag,instagram,X,facebook,snapchat,whatsapp,footer_logo,android,apple,subscribe,area,bathroom,bedroom }
+
+export { logo,profile_circle,home_hashtag,instagram,X,facebook,snapchat,whatsapp,footer_logo,android,apple,subscribe,area,bathroom,bedroom,category1,category2,category3,category4,category5,category6 }

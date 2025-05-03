@@ -12,8 +12,7 @@ export default function BestRealEstate() {
         title="اكتشف أفضل العقارات في مدينتك!"
         description="تصفح العقارات المتاحة في مدن مختلفة واختر مكانك المثالي بكل سهولة."
         icon={<MapPinned className="text-blue-600" />}
-        align="left"
-      />
+       />
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
         {bestRealEstate.map((el) => (

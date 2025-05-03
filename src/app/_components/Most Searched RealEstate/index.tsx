@@ -1,20 +1,20 @@
 "use client";
+
+import { ScanSearch } from "lucide-react";
 import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { properties } from "@/constants";
-import { Star } from "lucide-react";
 import CardSlider from "@/components/ui/card-slider";
 import Card from "@/components/ui/card";
 import { SwiperSlide } from "swiper/react";
-
-export default function Features() {
+export default function MostSearchedRealEstate() {
   return (
-    <MaxWidthWrapper className="my-16">
+    <MaxWidthWrapper>
       <SectionHeader
-        title="الميزات الرئيسية"
-        description="تصفح الميزات الرئيسية التي تميز خدماتنا"
-        icon={<Star className="text-blue-600" />}
-       />
+        title="العقارات الأكثر بحثا"
+        description="أفضل المواقع والعروض التي يبحث عنها الجميع"
+        icon={<ScanSearch className="text-blue-600" />}
+      />
       <CardSlider
         showNavigation={true}
         showPagination={false}

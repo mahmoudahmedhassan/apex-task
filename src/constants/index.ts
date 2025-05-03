@@ -8,6 +8,7 @@ import {
   android,
   apple,
   subscribe,
+  category1,category2,category3,category4,category5,category6
 } from "@/assets/svg";
 import { best_realestate1, best_realestate2, features1, features2, features3, features4 } from "@/assets/images";
  
@@ -253,3 +254,60 @@ export const properties = [
     image: [features4, features3],
   },
 ];
+
+export const categories = [
+    {
+      id: 1,
+      title: "بيت",
+      image: category1,
+    },
+    {
+      id: 2,
+      title: "استراحة",
+      image: category2,
+    },
+    {
+      id: 3,
+      title: "فندق",
+      image: category3,
+    },
+    {
+      id: 4,
+      title: "شقة",
+      image: category4,
+    },
+    {
+      id: 5,
+      title: "كارفان",
+      image: category5,
+    },
+    {
+      id: 6,
+      title: "فيلا",
+      image: category6,
+    },
+
+];
+
+export const filterOptions = {
+  city: {
+    label: "المدينة",
+    placeholder: "اختر المدينة",
+    options: ["ولاية مرباط", "ولاية صلالة", "ولاية طاقة"],
+  },
+  region: {
+    label: "المنطقة",
+    placeholder: "اختر المنطقة",
+    options: ["ولاية مرباط", "ولاية صلالة", "ولاية طاقة"],
+  },
+  propertyType: {
+    label: "نوع العقار",
+    placeholder: "اختر نوع العقار",
+    options: ["فيلا", "كارفان", "شاليه", "استراحة", "شقة", "فندق"],
+  }
+
+
+};
+
+
+
