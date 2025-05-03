@@ -2,7 +2,7 @@
 
 import { Swiper } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { ArrowBigLeft, ArrowBigRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { ReactNode } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -69,11 +69,11 @@ export default function CardSlider({
 
         {showNavigation && (
           <>
-            <button className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-4 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-50">
-              <ArrowBigLeft className="w-6 h-6 text-[#33264C]" />
+            <button className="after:hidden before:hidden swiper-button-prev   absolute top-1/2 -translate-y-1/2 !-left-4 z-10 !w-12 !h-12 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-50">
+             <ChevronLeft className="!w-6 !h-6 !text-[#0D0065] " />
             </button>
-            <button className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-4 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-50">
-              <ArrowBigRight className="w-6 h-6 text-[#33264C]" />
+            <button className="after:hidden before:hidden swiper-button-next absolute top-1/2 -translate-y-1/2 !-right-4 z-12 !w-12 !h-12 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-50">
+            <ChevronRight className="!w-6 !h-6 !text-[#0D0065] " />
             </button>
           </>
         )}
