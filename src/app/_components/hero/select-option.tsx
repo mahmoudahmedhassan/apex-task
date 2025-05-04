@@ -22,15 +22,24 @@ export const SelectInput: React.FC<SelectInputProps> = ({
   value,
   onChange,
 }) => (
-  <div className="text-right w-full">
-    <label className="text-sm font-medium mb-1 block text-gray-700">{label}</label>
+  <div className="w-full" dir="rtl">
+    <label className="text-sm text-start font-medium mb-1 block text-gray-700">
+      {label}
+    </label>
     <Select value={value} onValueChange={onChange}>
-      <SelectTrigger className="w-full">
-        <SelectValue placeholder={placeholder} />
+      <SelectTrigger className="w-full flex-row-reverse justify-between !text-gray-700">
+        <SelectValue
+          placeholder={placeholder}
+          className="text-right"
+        />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="text-right">
         {options.map((option) => (
-          <SelectItem key={option} value={option}>
+          <SelectItem
+            key={option}
+            value={option}
+            className="text-sm font-medium !text-gray-700  "
+          >
             {option}
           </SelectItem>
         ))}

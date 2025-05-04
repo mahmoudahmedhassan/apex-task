@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import * as React from "react"
 import { addDays, format } from "date-fns"
@@ -15,39 +15,46 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
+interface DatePickerWithRangeProps extends React.HTMLAttributes<HTMLDivElement> {
+  placeholder?: string
+}
+
 export function DatePickerWithRange({
   className,
-}: React.HTMLAttributes<HTMLDivElement>) {
+  placeholder = "اختر التاريخ",
+}: DatePickerWithRangeProps) {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(),
     to: addDays(new Date(), 5),
   })
 
+  const isDateSelected = !!date?.from
+
   return (
-    <div className={cn("grid gap-2", className, "text-right rtl")}>
-      <label className="text-sm font-medium   block text-gray-700">الفترة الزمنية</label>
+    <div className={cn("grid gap-2 text-right", className)} dir="rtl">
+      <label className="text-sm font-medium block text-gray-700">تاريخ الحجز</label>
       <Popover>
         <PopoverTrigger asChild>
           <Button
             id="date"
-            variant={"outline"}
+            variant="outline"
             className={cn(
-              "w-full justify-between font-normal rtl:text-right",
-              !date && "text-muted-foreground"
+              "w-full justify-between rtl:text-right",
+              isDateSelected ? "text-gray-500" : "text-gray-400"
             )}
           >
             <CalendarIcon className="ml-2 rtl:ml-0 rtl:mr-2" />
-            {date?.from ? (
-              date.to ? (
+            {isDateSelected ? (
+              date?.to ? (
                 <>
-                  {format(date.from, "dd LLL yyyy", { locale: ar })} -{" "}
-                  {format(date.to, "dd LLL yyyy", { locale: ar })}
+                  {format(date.from!, "dd LLL yyyy", { locale: ar })} -{" "}
+                  {format(date.to!, "dd LLL yyyy", { locale: ar })}
                 </>
               ) : (
-                format(date.from, "dd LLL yyyy", { locale: ar })
+                format(date.from!, "dd LLL yyyy", { locale: ar })
               )
             ) : (
-              <span>اختر التاريخ</span>
+              <span>{placeholder}</span>
             )}
           </Button>
         </PopoverTrigger>
