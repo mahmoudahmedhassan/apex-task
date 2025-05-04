@@ -8,7 +8,7 @@ import AuthButtons from "./auth-buttons";
 
 function Header() {
   return (
-    <div className="xs:h-12 lg:h-18 border-b border-gray-200  flex-1 flex">
+    <div className="xs:h-14 lg:h-18 border-b border-gray-200  flex-1 flex">
       <MaxWidthWrapper className="flex justify-between items-center">
         <Logo />
         <Navbar />
